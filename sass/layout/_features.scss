@@ -1,0 +1,28 @@
+
+.featurs {
+    padding-top: 94px;
+    padding-bottom: 94px;  
+}
+.feature-list {
+    display: flex;
+    color: #757575;
+    @include font (14px, 1.71, null, 0.03em);
+}
+.feature-item {
+    width: 270px;
+    &:not(:last-child) {
+        margin-right: 30px; 
+    }
+}
+/*Заголовки h2*/
+.feature-title{
+    @extend %style-title;
+}
+.feature-item-icon {
+    width: 270px;
+    height: 120px;
+    background: #F5F4FA;
+    border-radius: 4px;
+    @extend %text-center;
+    margin-bottom: 30px;
+}

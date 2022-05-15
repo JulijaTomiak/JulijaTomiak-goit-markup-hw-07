@@ -1,0 +1,72 @@
+.header {
+    border-bottom: 1px solid rgba(236, 236, 236, 1);
+}
+.header .container {
+    display: flex;
+    align-items: center;
+}
+.header__logo {
+    margin-right: 93px;
+}
+/*Cсилки navigation*/
+.navigation {
+    display: flex;
+}
+.navigation__item:not(:last-child) {
+    margin-right: 50px;
+}
+.link {
+    color: #212121;
+    @include font (14px, 1.14, 500, 0.02em);
+    transition: color 250ms var(--time-animation);
+    .navigation &:hover,
+    .navigation &:focus {
+   color: var(--secondary-text-color);
+    }
+}
+.navigation__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.navigation__link--state {
+    position: relative;
+    display: flex;
+    color:var(--secondary-text-color);
+    @include font (14px, 1.14, 500, 0.02em);
+    padding-top: 32px;
+    padding-bottom: 32px;
+    &::after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 4px;
+        background-color: var(--secondary-text-color);
+        border-radius: 2px;
+        bottom: -1px;   
+    }
+}
+/*Контакти*/
+.connect__link {
+    display: flex;
+    align-items: center;
+    color: #757575;
+    @include font (14px, 1.14, 500, 0.02em);
+    fill: var(--secondary-text-color);
+    transition: color 250ms var(--time-animation),
+    fill 250ms var(--time-animation);
+    &:hover,
+    &:focus {
+    color: var(--secondary-text-color); 
+    fill: currentColor;
+    }
+}
+.connect {
+    display: flex;
+    margin-left: auto;
+}
+.connect__icon {
+   fill: currentColor;
+   margin-right: 10px;
+}

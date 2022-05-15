@@ -1,0 +1,43 @@
+.hero {
+    background: #2F303A;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.hero__list {
+    margin: 0 auto;
+    color: #FFFFFF;
+    text-transform: uppercase;
+    @include font (44px, 1.36, 900, 0.06em);
+    max-width: 696px;
+    height: 120px;
+}
+/*Кнопка*/
+.hero__btn {
+    color:var(--background-origin);
+    background-color: var(--secondary-text-color);
+    font-family: inherit;
+    @include font (16px, 1.88, 700, 0.06em);
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    border-radius: 4px;
+    padding: 10px 32px;
+    min-width: 200px;
+    margin-top: 30px;
+    transition: color 250ms var(--time-animation),
+    background-color 250ms var(--time-animation);
+    border: none;
+    &:hover,
+    &:focus {
+    color: var(--secondary-text-color);
+    background-color: var(--background-origin);
+    }
+}

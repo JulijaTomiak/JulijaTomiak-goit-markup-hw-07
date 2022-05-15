@@ -1,0 +1,31 @@
+.clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+.client-title {
+    @extend %style-title;
+}
+.client-list {
+    display: flex;
+}
+.client-item:not(:last-child) {
+    margin-right: 30px;
+}
+.client-link-icon {
+    width: 170px;
+    height: 92px;
+    background: var(--background-origin);
+    border: 1px solid rgba(175, 177, 184, 1);
+    border-radius: 4px;
+    @extend %text-center;
+    fill: rgba(175, 177, 184, 1);
+    transition: border 250ms var(--time-animation),
+    border-radius 250ms var(--time-animation),
+    fill 250ms var(--time-animation);
+    &:hover,
+    &:focus {
+    border: 1px solid var(--secondary-text-color);
+    border-radius: 4px;
+    fill: var(--secondary-text-color);
+    }
+}
